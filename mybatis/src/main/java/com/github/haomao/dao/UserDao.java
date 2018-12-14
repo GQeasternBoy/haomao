@@ -12,4 +12,6 @@ import org.springframework.stereotype.Repository;
 public interface UserDao {
 
     User getUser(Long id);
+
+    int insertUser(User user);
 }

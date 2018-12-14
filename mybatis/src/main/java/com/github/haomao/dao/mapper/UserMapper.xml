@@ -4,4 +4,8 @@
     <select id="getUser" parameterType="long" resultType="user">
         SELECT id,user_name as userName, sex, note FROM t_user where id = #{id}
     </select>
+
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO t_user (user_name,sex,note) VALUES (#{userName},#{sex},#{note})
+    </insert>
 </mapper>

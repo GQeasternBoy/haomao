@@ -20,4 +20,9 @@ public class UserService {
         User user = userDao.getUser(1l);
         System.out.println(user);
     }
+
+    public int saveUser(User user){
+        int update = userDao.insertUser(user);
+        return update;
+    }
 }
